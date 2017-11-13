@@ -44,7 +44,7 @@ function configureStoreDev(initialState = {}, history) {
 
   /* istanbul ignore next */
   if (module.hot) {
-    module.hot.accept('./state', () => {
+    module.hot.accept('../state', () => {
       Promise.resolve(require.ensure([], require => require('../state')))
       .then((reducerModule) => {
         const createReducers = reducerModule.default;
