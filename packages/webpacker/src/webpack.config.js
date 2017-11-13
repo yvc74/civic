@@ -18,7 +18,7 @@ const config = {
   resolve: {
     extensions: ['.js', '.jsx'],
   },
-  devtool: isDev ? 'source-map' : 'hidden-source-map',
+  devtool: isDev ? 'source-map' : 'cheap-eval-source-map',
 };
 
 const webpackConfig = composeConfig(

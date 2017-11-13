@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import LeafletMap from '@hackoregon/component-library/lib/LeafletMap/LeafletMap';
+import { LeafletMap } from '@hackoregon/component-library';
 import { LayerGroup, GeoJSON } from 'react-leaflet';
 import { isEmpty } from 'ramda';
 import { connect } from 'react-redux';
