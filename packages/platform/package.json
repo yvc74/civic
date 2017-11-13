@@ -1,6 +1,6 @@
 {
   "name": "@hackoregon/civic-platform",
-  "version": "1.0.0-alpha.1c62c05f",
+  "version": "1.0.0-alpha.0b7fc8a4",
   "description": "Civic - A Hack Oregon Project",
   "engines": {
     "node": ">=6"
@@ -12,11 +12,10 @@
   "license": "MIT",
   "scripts": {
     "clean": "npx rimraf ./build",
-    "build": "npx rimraf dist && babel-node ./tools/build.js",
+    "build": "webpack --config webpack.config.dev.js --colors",
     "analyze": "babel-node ./tools/analyzeBundle.js",
     "prestart:dev": "npm run clean",
     "start:dev": "npx cross-env BABEL_ENV=development babel-node server",
-    "build": "webpack --config webpack.config.dev.js --colors",
     "build:server": "babel src --out-dir build --copy-files",
     "build:prod": "NODE_ENV=production run-s build build:server",
     "build:all": "BABEL_ENV=production run-s clean build build:server",
@@ -33,16 +32,16 @@
     "url": "https://github.com/hackoregon/civic-platform"
   },
   "dependencies": {
-    "@hackoregon/civic-emergency-response": "^1.0.0-alpha.1c62c05f",
-    "@hackoregon/civic-housing": "^1.0.0-alpha.1c62c05f",
+    "@hackoregon/civic-emergency-response": "^1.0.0-alpha.0b7fc8a4",
+    "@hackoregon/civic-housing": "^1.0.0-alpha.0b7fc8a4",
     "@hackoregon/civic-server": "0.0.10",
-    "@hackoregon/component-library": "^1.0.0-alpha.1c62c05f",
-    "@hackoregon/webpacker": "^1.0.0-alpha.1c62c05f",
+    "@hackoregon/component-library": "^1.0.0-alpha.0b7fc8a4",
+    "@hackoregon/webpacker": "^1.0.0-alpha.0b7fc8a4",
     "app-root-dir": "^1.0.2",
     "assets-webpack-plugin": "^3.5.1",
     "autoprefixer": "^6.7.7",
-    "babel-polyfill": "^6.24.1",
     "babel-cli": "^6.24.1",
+    "babel-polyfill": "^6.24.1",
     "babel-runtime": "^6.24.1",
     "compression": "^1.6.2",
     "css-loader": "^0.28.0",
