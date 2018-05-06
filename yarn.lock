@@ -12750,17 +12750,17 @@ version-bump-prompt@^3.1.0:
     semver "^5.0.3"
 
 victory-chart@^26.0.0:
-  version "26.1.0"
-  resolved "https://registry.yarnpkg.com/victory-chart/-/victory-chart-26.1.0.tgz#5c096caf899ca7447c489023809adc32d7c97f12"
+  version "26.0.1"
+  resolved "https://registry.yarnpkg.com/victory-chart/-/victory-chart-26.0.1.tgz#d8b50bd601af0e5bd5e9bec2c08f27b4785a331b"
   dependencies:
     d3-voronoi "^1.1.2"
     lodash "^4.17.5"
     react-fast-compare "^1.0.0"
-    victory-core "^22.1.0"
+    victory-core "^22.0.0"
 
-victory-core@^22.0.0, victory-core@^22.1.0:
-  version "22.1.0"
-  resolved "https://registry.yarnpkg.com/victory-core/-/victory-core-22.1.0.tgz#f721e67dc0365833a4a632bbb67c00e8b94eac00"
+victory-core@^22.0.0:
+  version "22.0.0"
+  resolved "https://registry.yarnpkg.com/victory-core/-/victory-core-22.0.0.tgz#c251c2063fb484d50be4aca9fc9be6378acc4f11"
   dependencies:
     d3-ease "^1.0.0"
     d3-interpolate "^1.1.1"
