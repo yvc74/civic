@@ -29,7 +29,7 @@ const description = `
 // var result = objArray.map(a => a.foo);
 
 export default () => storiesOf(displayName, module).addDecorator(withKnobs)
-  .add('Basic Usage', (() => {
+  .add('Basic Usage', withInfo('text goes here')(() => {
     const data = array('Data',[
       {sortOrder: 1, population: 9000, label: 'Labrador Retriever'},
       {sortOrder: 2, population: 8000, label: 'Standard Poodle'},
