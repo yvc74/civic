@@ -30,7 +30,33 @@ const subtitleStyle = css`
   text-align: center;
 `;
 
-const Scatterplot = ({ title, subtitle, data, xLabel, yLabel }) => (
+const genColor = () => `#${(Math.random() * 0xFFFFFF << 0).toString(16)}`;
+
+const dataHandler = (size, data, dataGroups) => {
+  if (dataGroups && dataGroups.length) {
+    return dataGroups.map((group, i) => {
+      const color = genColor();
+      const key = group + i;
+      return (
+        <VictoryScatter
+          key={key}
+          style={{ data: { fill: color } }}
+          size={size}
+          data={data.filter(d => group === d.name)}
+        />);
+    });
+  }
+  const fill = genColor();
+  return (
+    <VictoryScatter
+      style={{ data: { fill } }}
+      size={size}
+      data={data}
+    />
+  );
+};
+
+const Scatterplot = ({ title, subtitle, xLabel, yLabel, size, data, dataGroups }) => (
   <div>
     { title ? <h3 className={titleStyle}>{title}</h3> : null}
     { subtitle ? <span className={subtitleStyle}>{subtitle}</span> : null}
@@ -43,11 +69,8 @@ const Scatterplot = ({ title, subtitle, data, xLabel, yLabel }) => (
         <VictoryLabel text={yLabel} textAnchor="middle" x={50} y={30} />
         <VictoryLabel text={xLabel} textAnchor="end" x={600} y={285} />
 
-        <VictoryScatter
-          style={{ data: { fill: '#c43a31' } }}
-          size={7}
-          data={data}
-        />
+        {dataHandler(size, data, dataGroups)}
+
       </VictoryChart>
     </div>
   </div>
@@ -56,9 +79,15 @@ const Scatterplot = ({ title, subtitle, data, xLabel, yLabel }) => (
 Scatterplot.propTypes = {
   title: PropTypes.string,
   subtitle: PropTypes.string,
-  data: PropTypes.Array,
   xLabel: PropTypes.string,
   yLabel: PropTypes.string,
+  size: PropTypes.number,
+  data: PropTypes.Array,
+  dataGroups: PropTypes.Array,
+};
+
+Scatterplot.defaultProps = {
+  size: 7,
 };
 
 export default Scatterplot;
