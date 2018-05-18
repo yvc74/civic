@@ -14,7 +14,7 @@ import BarChartStory from './BarChart.story';
 import lineChartStory from './LineChart.story';
 import sankeyStory from './Sankey.story';
 import placeholderStory from './Placeholder.story';
-import dropdownStory from './DropdownMenu.story';
+import dropdownStory from './Dropdown.story';
 import headerStory from './Header.story';
 import Welcome from './Welcome';
 import baseMapStory from './BaseMap.story';
