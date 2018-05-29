@@ -1,5 +1,4 @@
 import App from './components/App';
-import Example from './components/Example';
 
 const routes = () => [
   {

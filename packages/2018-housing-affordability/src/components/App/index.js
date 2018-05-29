@@ -29,9 +29,11 @@ class App extends Component {
 App.displayName = 'App';
 
 export default connect(
-  state => ({
+  state => {
+    console.log(state);
+    return ({
     medianPriceData: getMedianPriceData(state),
-  }),
+  })},
   dispatch => ({
     getMedianPrices: () => dispatch(getMedianPricesThunk()),
   }),
