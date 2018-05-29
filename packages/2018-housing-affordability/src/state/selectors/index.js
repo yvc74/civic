@@ -6,7 +6,7 @@ export const rootState = state => state.housing || state;
 
 // Creating all selectors off the appState selector eliminates the need
 // to think about state namespacing in each component
-export const getSomeData = createSelector(
+export const getMedianPriceData = createSelector(
   rootState,
-  ({ someData }) => someData,
+  ({ medianPriceData = [] }) => medianPriceData,
 );
