@@ -113,6 +113,8 @@
   "dependencies": {
     "@hackoregon/civic-server": "0.0.10",
     "d3-request": "^1.0.6",
-    "deck.gl": "^5.2.4"
+    "deck.gl": "^5.2.4",
+    "react-map-gl": "^3.2.8",
+    "webpack-blocks": "^1.0.0"
   }
 }
