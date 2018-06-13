@@ -14,18 +14,12 @@ const description = `
   Clicking should trigger an action.`;
 
 
-const label = 'Options';
 const options = [
-  object('option 1', { value: '0', label: 'David' }, 'group-id2'),
-  { value: '1', label: 'Daniel' },
-  { value: '2', label: 'Last' },
-  { value: '3', label: 'Name' },
+  object('option 1', { value: '0', label: 'David' }, 'group-id1'),
+  object('option 2', { value: '1', label: 'Daniel' }, 'group-id1'),
+  object('option 3', { value: '2', label: 'Last' }, 'group-id1'),
+  object('option 4', { value: '3', label: 'Name' }, 'group-id1'),
 ];
-const defaultValue = '0';
-
-const groupId = 'Group-ID1';
-
-const value = select(label, options, defaultValue, groupId);
 
 const demoCode = () => (
   <Dropdown
