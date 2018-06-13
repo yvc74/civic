@@ -37,6 +37,7 @@ Dropdown.propTypes = {
   searchable: PropTypes.bool,
   disabled: PropTypes.bool,
   multi: PropTypes.bool,
+  simpleValue: PropTypes.bool,
 };
 
 Dropdown.defaultProps = {
