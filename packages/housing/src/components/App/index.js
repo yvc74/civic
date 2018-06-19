@@ -24,6 +24,7 @@ import Map from '../Map';
 import DemographicDetailView from '../DemographicDetailView';
 import TempProdVsCost from '../TempProdVsCost';
 import TempVoterRegistration from '../TempVoterRegistration';
+import Affordability from '../Affordability';
 import MapLegend from '../MapLegend';
 import './app.styles.css';
 
@@ -110,6 +111,7 @@ export class App extends React.Component {
 
     return (
       <div>
+        <Affordability />
         <StoryCard title="Map Your Affordability" collectionId="housing" cardId="affordability-map">
           <p className="description" style={textAlignCenter}>Compare your income to the average income of common demographics.</p>
           <div>

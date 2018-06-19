@@ -12,9 +12,11 @@ import PacificNorthwestTopsNationInSurgingHomePrices from '../PacificNorthwestTo
 import MeasuringMarketValueOfHomesInPortland from '../MeasuringMarketValueOfHomesInPortland';
 import AffordabilityInAComplexHousingMarket from '../AffordabilityInAComplexHousingMarket';
 import ExploreHousingPolicyImplementation from '../ExploreHousingPolicyImplementation';
+import AffordabilityMeaning from '../AffordabilityMeaning';
 
 const App = () => (
   <PageLayout>
+    <AffordabilityMeaning />
     <BuildingBoomInPortland />
     <WhatDoesAffordabilityMean />
     <AffordableRentalUnitsDwindling />
