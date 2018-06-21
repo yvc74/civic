@@ -58,7 +58,7 @@ export class Packages extends React.Component {
       sandbox,
     } = this.props;
 
-    const packages = sandbox.packages ? Object.keys(sandbox.packages).map(p => ({ description: sandbox.packages[p].description, title: capitalize(p) })) : [];
+    const packages = sandbox && sandbox.packages ? Object.keys(sandbox.packages).map(p => ({ description: sandbox.packages[p].description, title: capitalize(p) })) : [];
 
     const Loader = () => <div className={loader}>Loading...</div>;
     const ErrorMessage = () => <div className={error}>Could not load data for the sandbox.</div>;
