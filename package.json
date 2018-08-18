@@ -22,9 +22,11 @@
   ],
   "private": true,
   "scripts": {
-    "bootstrap": "yarn install --frozen-lockfile && lerna bootstrap",
-    "build": "lerna run build",
-    "configure": "lerna run configure",
+    "bootstrap": "yarn install --frozen-lockfile",
+    "build:cjs": "cross-env BABEL_ENV=cjs lerna run --no-sort --stream --concurrency=1 build:cjs",
+    "build:esm": "cross-env BABEL_ENV=esm lerna run --no-sort --stream --concurrency=1 build:esm",
+    "build": "lerna run build --no-sort --stream",
+    "configure": "lerna run configure --no-sort --stream",
     "tag": "lerna publish --skip-npm",
     "canary": "lerna publish --skip-git --skip-npm --canary",
     "clean": "lerna clean && rimraf node_modules",
@@ -32,9 +34,9 @@
     "deploy-storybook": "BABEL_ENV=esm storybook-to-ghpages",
     "in": "lerna run --scope",
     "link:all": "lerna link",
-    "lint": "lerna run lint -- --fix",
+    "lint": "lerna run --no-sort --stream lint -- --fix",
     "storybook": "BABEL_ENV=esm start-storybook -p 6006",
-    "test": "lerna run test",
+    "test": "lerna run --no-sort --stream test",
     "travis": "make travis"
   },
   "devDependencies": {

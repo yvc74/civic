@@ -85,7 +85,7 @@ access-ecr:
 
 deploy-2017: setup-aws access-ecr
 	@echo "Deploying the 2017 Container"
-	cd packages/2017 && yarn run build
+	cd packages/2017 && yarn build
 	cd packages/2017 && docker build -t civic-2017 .
 	@echo "Pushing civic-2017:latest"
 	cd packages/2017 && docker tag civic-2017:latest "$$REMOTE_IMAGE_URL/civic-2017:latest"
@@ -96,7 +96,7 @@ deploy-2017: setup-aws access-ecr
 
 deploy-2018: setup-aws access-ecr
 	@echo "Deploying the 2018 Container"
-	cd packages/2018 && yarn run build
+	cd packages/2018 && yarn build
 	cd packages/2018 && docker build -t civic-2018 .
 	@echo "Pushing civic-2018:latest"
 	cd packages/2018 && docker tag civic-2018:latest "$$REMOTE_IMAGE_URL/civic-2018:latest"
@@ -108,4 +108,4 @@ deploy-2018: setup-aws access-ecr
 
 deploy-component-library:
 	@echo "Deploying the component library";
-	yarn run deploy-storybook -- --ci;
+	yarn deploy-storybook -- --ci;

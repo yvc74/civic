@@ -9,7 +9,7 @@
 4. install [yarn](https://yarnpkg.com/en/docs/install) (using yarn instead of npm for installing dependencies will help keep versions in sync more easily), and run `yarn` from inside the repo to install dependencies.
 5. `npm start` - starts dev mode (watching tests + linter).
 6. `npm test` - runs tests.
-7. `npm run coverage` - runs tests and displays a coverage summary.
+7. `yarn coverage` - runs tests and displays a coverage summary.
 
 ### Using the [Component Library](https://github.com/hackoregon/component-library) in your project
 The component library has been installed as a dependency from the npm build version 0.0.6 (https://www.npmjs.com/package/@hackoregon/component-library)

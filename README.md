@@ -57,7 +57,7 @@ We are committed to a shared component library. This is achieved using the `comp
 Run Storybook with the following command:
 
 ```bash
-$ yarn run storybook
+$ yarn storybook
 ```
 
 ## Project Layout

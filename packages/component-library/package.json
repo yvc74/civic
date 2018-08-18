@@ -5,12 +5,12 @@
   "main": "dist/index.js",
   "modules": "es/index.js",
   "scripts": {
-    "build:esm": "babel src --out-dir es --copy-files --no-comments",
-    "build:cjs": "babel src --out-dir dist --copy-files --no-comments",
-    "build": "BABEL_ENV=esm npm run build:esm && BABEL_ENV=cjs npm run build:cjs",
-    "configure": "yarn run build",
+    "build:esm": "babel src --out-dir es --ignore=*.test.js --copy-files --no-comments",
+    "build:cjs": "babel src --out-dir dist --ignore=*.test.js --copy-files --no-comments",
+    "build": "BABEL_ENV=esm yarn build:esm && BABEL_ENV=cjs yarn build:cjs",
+    "configure": "yarnbuild",
     "test": "BABEL_ENV=test mocha --opts ./mocha.options ./src/**/*.test.js",
-    "test:watch": "npm run test -- -w",
+    "test:watch": "yarn test -- -w",
     "lint": "eslint --fix src stories"
   },
   "author": "David Daniel <davidedaniel@gmail.com> (http://davidedaniel.github.io)",

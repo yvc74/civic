@@ -11,7 +11,7 @@ This repo should help get started and keep the different projects aligned.
 3. `npm i` - install
 4. `npm start` - start dev mode (watching tests + linter)
 5. `npm test` - run tests
-6. `npm run coverage` - run tests w/ coverage
+6. `yarn coverage` - run tests w/ coverage
 
 #### Next up
 [ ]  Docs

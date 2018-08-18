@@ -13,16 +13,16 @@ This repo should help get started and keep the different projects aligned.
 4. `npm i` - install
 5. `npm start` - start dev mode (watching tests + linter)
 6. `npm test` - run tests
-7. `npm run coverage` - run tests w/ coverage
+7. `yarn coverage` - run tests w/ coverage
 
 ## Setup
 
 ```bash
 nvm use
 npm install
-npm run bootstrap # install external deps and link all packages
-npm run build # build all the packages
-npm run storybook # starts storybook for component-library
+yarn bootstrap # install external deps and link all packages
+yarn build # build all the packages
+yarn storybook # starts storybook for component-library
 ```
 
 ## Test

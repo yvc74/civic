@@ -5,17 +5,16 @@ node_js:
 services:
   - docker
 install:
-  - npm i -g npx
   - npm i -g rimraf
   - npm i -g cross-env
   - yarn bootstrap
-  - yarn run configure
+  - yarn configure
 matrix:
   include:
     - env: SUITE=2017
     - env: SUITE=2018
     - env: SUITE=COMPONENT_LIBRARY
 script:
-  - yarn run travis
+  - yarn travis
 after_success:
   - make deploy

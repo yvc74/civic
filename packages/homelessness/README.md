@@ -14,7 +14,7 @@ http://hacko-homelessness-staging.s3-website-us-west-2.amazonaws.com/
 3. install [yarn](https://yarnpkg.com/en/docs/install) (using yarn instead of npm for installing dependencies will help keep versions in sync more easily), and run `yarn` from inside the repo to install dependencies.
 4. `npm start` - start dev mode (watching tests + linter)
 5. `npm test` - run tests
-6. `npm run coverage` - run tests w/ coverage
+6. `yarn coverage` - run tests w/ coverage
 
 
 #### Using the [Component Library](https://github.com/hackoregon/component-library) in your project
