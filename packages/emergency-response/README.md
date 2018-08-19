@@ -8,7 +8,7 @@ This repo should help get started and keep the different projects aligned.
 #### Guide
 1. Get [Node 6.5 +](https://nodejs.org) - I recommend using [Node Version Manager](https://github.com/creationix/nvm).
 2. `git clone https://github.com/hackoregon/hackor-frontend-starter.git`.
-3. `npm i` - install
+3. `yarn` - install
 4. `npm start` - start dev mode (watching tests + linter)
 5. `npm test` - run tests
 6. `yarn coverage` - run tests w/ coverage
